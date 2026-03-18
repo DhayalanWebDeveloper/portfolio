@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1480B8"/>
+      <stop offset="100%" stop-color="#3CD8C8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#50E8D8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1480B8" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Decorative large circles -->
+  <circle cx="680" cy="100" r="140" fill="url(#accent)"/>
+  <circle cx="100" cy="390" r="100" fill="url(#accent)"/>
+
+  <!-- Decorative grid dots -->
+  <g fill="white" opacity="0.08">
+    <circle cx="50" cy="40" r="2.5"/><circle cx="80" cy="40" r="2.5"/><circle cx="110" cy="40" r="2.5"/><circle cx="140" cy="40" r="2.5"/>
+    <circle cx="50" cy="70" r="2.5"/><circle cx="80" cy="70" r="2.5"/><circle cx="110" cy="70" r="2.5"/><circle cx="140" cy="70" r="2.5"/>
+    <circle cx="50" cy="100" r="2.5"/><circle cx="80" cy="100" r="2.5"/><circle cx="110" cy="100" r="2.5"/><circle cx="140" cy="100" r="2.5"/>
+  </g>
+
+  <!-- Floating circles -->
+  <circle cx="700" cy="350" r="5" fill="white" opacity="0.2"/>
+  <circle cx="250" cy="40" r="4" fill="#50E8D8" opacity="0.3"/>
+  <circle cx="550" cy="420" r="6" fill="white" opacity="0.15"/>
+  <circle cx="80" cy="250" r="3" fill="#3CD8C8" opacity="0.25"/>
+  <circle cx="750" cy="200" r="4" fill="white" opacity="0.2"/>
+  <circle cx="400" cy="430" r="3" fill="#50E8D8" opacity="0.2"/>
+
+  <!-- Decorative lines -->
+  <line x1="620" y1="300" x2="760" y2="300" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="640" y1="320" x2="740" y2="320" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Large Gear Icon -->
+  <g transform="translate(370, 105)" stroke="white" stroke-width="2" fill="white" fill-opacity="0.12">
+    <path d="M0,-32 L6,-28 L8,-22 L14,-20 L18,-26 L24,-22 L22,-16 L26,-10 L32,-10 L32,-2 L26,-0 L26,8 L32,12 L28,18 L22,16 L18,22 L22,28 L16,30 L10,24 L4,26 L2,32 L-4,32 L-6,26 L-12,24 L-18,30 L-22,26 L-18,20 L-24,14 L-30,16 L-32,10 L-26,6 L-26,-2 L-32,-6 L-28,-14 L-22,-12 L-18,-18 L-22,-24 L-16,-28 L-10,-22 L-4,-26 L-2,-32Z"/>
+    <circle cx="0" cy="0" r="12" fill="white" fill-opacity="0.2"/>
+  </g>
+
+  <!-- Support/headset icon -->
+  <g transform="translate(445, 95)" stroke="white" stroke-width="2" fill="none" opacity="0.6">
+    <!-- Headset arc -->
+    <path d="M-18,5 C-18,-15 18,-15 18,5"/>
+    <!-- Left ear -->
+    <rect x="-24" y="2" width="10" height="16" rx="4" fill="white" fill-opacity="0.2" stroke="white"/>
+    <!-- Right ear -->
+    <rect x="14" y="2" width="10" height="16" rx="4" fill="white" fill-opacity="0.2" stroke="white"/>
+    <!-- Mic arm -->
+    <path d="M14,14 C14,24 5,28 0,26"/>
+    <circle cx="-2" cy="26" r="3" fill="white" fill-opacity="0.3"/>
+  </g>
+
+  <!-- Small connecting dots -->
+  <g fill="#50E8D8" opacity="0.3">
+    <circle cx="335" cy="80" r="2"/>
+    <circle cx="470" cy="75" r="2"/>
+    <circle cx="340" cy="140" r="2"/>
+    <circle cx="475" cy="135" r="2"/>
+    <line x1="337" y1="82" x2="365" y2="90" stroke="#50E8D8" stroke-width="0.8"/>
+    <line x1="468" y1="77" x2="450" y2="85" stroke="#50E8D8" stroke-width="0.8"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="250" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700" fill="white" letter-spacing="2">OdooSupport</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="285" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" fill="white" opacity="0.7" letter-spacing="2">ERP Services</text>
+
+  <!-- Bottom decorative bar -->
+  <rect x="350" y="310" width="100" height="3" rx="1.5" fill="#50E8D8" opacity="0.5"/>
+</svg>

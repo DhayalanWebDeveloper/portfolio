@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C5A8A"/>
+      <stop offset="100%" stop-color="#3CD8C8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#50E8D8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0C5A8A" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Decorative large circles -->
+  <circle cx="700" cy="70" r="130" fill="url(#accent)"/>
+  <circle cx="80" cy="400" r="110" fill="url(#accent)"/>
+
+  <!-- Decorative grid dots -->
+  <g fill="white" opacity="0.07">
+    <circle cx="630" cy="340" r="3"/><circle cx="670" cy="340" r="3"/><circle cx="710" cy="340" r="3"/>
+    <circle cx="630" cy="380" r="3"/><circle cx="670" cy="380" r="3"/><circle cx="710" cy="380" r="3"/>
+    <circle cx="630" cy="420" r="3"/><circle cx="670" cy="420" r="3"/><circle cx="710" cy="420" r="3"/>
+  </g>
+
+  <!-- Floating circles -->
+  <circle cx="150" cy="80" r="5" fill="#50E8D8" opacity="0.35"/>
+  <circle cx="650" cy="280" r="4" fill="white" opacity="0.2"/>
+  <circle cx="300" cy="420" r="6" fill="#3CD8C8" opacity="0.2"/>
+  <circle cx="500" cy="40" r="3" fill="white" opacity="0.15"/>
+  <circle cx="750" cy="200" r="4" fill="#50E8D8" opacity="0.25"/>
+  <circle cx="100" cy="250" r="3" fill="white" opacity="0.2"/>
+
+  <!-- Decorative lines -->
+  <line x1="50" y1="180" x2="160" y2="180" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="50" y1="200" x2="130" y2="200" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- User/Person Icon -->
+  <g transform="translate(400, 95)">
+    <!-- Head -->
+    <circle cx="0" cy="-25" r="18" fill="white" fill-opacity="0.15" stroke="white" stroke-width="2"/>
+    <!-- Body -->
+    <path d="M-28,20 C-28,-5 -18,-10 0,-10 C18,-10 28,-5 28,20" fill="white" fill-opacity="0.15" stroke="white" stroke-width="2"/>
+  </g>
+
+  <!-- Brain shapes -->
+  <g transform="translate(400, 65)" stroke="#50E8D8" stroke-width="1.5" fill="none" opacity="0.4">
+    <!-- Brain outline left -->
+    <path d="M-55,-15 C-65,-15 -70,-5 -65,5 C-72,10 -68,25 -58,25 C-55,32 -45,32 -42,25"/>
+    <!-- Brain outline right -->
+    <path d="M55,-15 C65,-15 70,-5 65,5 C72,10 68,25 58,25 C55,32 45,32 42,25"/>
+    <!-- Neural connections -->
+    <circle cx="-50" cy="5" r="3" fill="#50E8D8" opacity="0.5"/>
+    <circle cx="50" cy="5" r="3" fill="#50E8D8" opacity="0.5"/>
+    <circle cx="-55" cy="20" r="2" fill="#3CD8C8" opacity="0.4"/>
+    <circle cx="55" cy="20" r="2" fill="#3CD8C8" opacity="0.4"/>
+  </g>
+
+  <!-- Connection dots around head -->
+  <g transform="translate(400, 70)" fill="#3CD8C8" opacity="0.3">
+    <circle cx="-40" cy="-30" r="2.5"/>
+    <circle cx="40" cy="-30" r="2.5"/>
+    <circle cx="-45" cy="0" r="2"/>
+    <circle cx="45" cy="0" r="2"/>
+    <line x1="-40" y1="-30" x2="-20" y2="-20" stroke="#3CD8C8" stroke-width="0.8"/>
+    <line x1="40" y1="-30" x2="20" y2="-20" stroke="#3CD8C8" stroke-width="0.8"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="255" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="700" fill="white" letter-spacing="3">Bomm.ai</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="290" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" fill="white" opacity="0.7" letter-spacing="2">AI Persona Platform</text>
+
+  <!-- Bottom decorative bar -->
+  <rect x="350" y="315" width="100" height="3" rx="1.5" fill="#50E8D8" opacity="0.5"/>
+</svg>

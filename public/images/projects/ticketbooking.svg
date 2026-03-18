@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1480B8"/>
+      <stop offset="100%" stop-color="#3CD8C8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#50E8D8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#1480B8" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Decorative large circles -->
+  <circle cx="680" cy="100" r="140" fill="url(#accent)"/>
+  <circle cx="80" cy="380" r="100" fill="url(#accent)"/>
+
+  <!-- Decorative grid dots -->
+  <g fill="white" opacity="0.08">
+    <circle cx="600" cy="350" r="3"/><circle cx="640" cy="350" r="3"/><circle cx="680" cy="350" r="3"/><circle cx="720" cy="350" r="3"/>
+    <circle cx="600" cy="390" r="3"/><circle cx="640" cy="390" r="3"/><circle cx="680" cy="390" r="3"/><circle cx="720" cy="390" r="3"/>
+    <circle cx="600" cy="430" r="3"/><circle cx="640" cy="430" r="3"/><circle cx="680" cy="430" r="3"/><circle cx="720" cy="430" r="3"/>
+  </g>
+
+  <!-- Floating circles -->
+  <circle cx="120" cy="80" r="5" fill="#50E8D8" opacity="0.4"/>
+  <circle cx="300" cy="40" r="3" fill="white" opacity="0.2"/>
+  <circle cx="680" cy="300" r="6" fill="white" opacity="0.15"/>
+  <circle cx="500" cy="420" r="4" fill="#50E8D8" opacity="0.3"/>
+  <circle cx="750" cy="250" r="3" fill="white" opacity="0.2"/>
+  <circle cx="200" cy="200" r="4" fill="#3CD8C8" opacity="0.25"/>
+
+  <!-- Decorative lines -->
+  <line x1="50" y1="200" x2="150" y2="200" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="50" y1="220" x2="130" y2="220" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Ticket Icon -->
+  <g transform="translate(400, 120)">
+    <!-- Ticket shape -->
+    <rect x="-60" y="-35" width="120" height="70" rx="8" fill="white" fill-opacity="0.15" stroke="white" stroke-width="2"/>
+    <!-- Ticket perforation -->
+    <line x1="-20" y1="-35" x2="-20" y2="35" stroke="white" stroke-width="1.5" stroke-dasharray="4,4" opacity="0.6"/>
+    <!-- Film strip lines on left -->
+    <rect x="-55" y="-22" width="25" height="6" rx="1" fill="white" opacity="0.3"/>
+    <rect x="-55" y="-10" width="25" height="6" rx="1" fill="white" opacity="0.3"/>
+    <rect x="-55" y="2" width="25" height="6" rx="1" fill="white" opacity="0.3"/>
+    <rect x="-55" y="14" width="25" height="6" rx="1" fill="white" opacity="0.3"/>
+    <!-- Star on right side -->
+    <polygon points="15,0 19,-12 32,-12 22,-20 25,-33 15,-25 5,-33 8,-20 -2,-12 11,-12" fill="white" opacity="0.4" transform="translate(10,5) scale(0.7)"/>
+  </g>
+
+  <!-- Film reel decoration -->
+  <g transform="translate(400, 120)" stroke="#50E8D8" stroke-width="1.5" fill="none" opacity="0.3">
+    <circle cx="-90" cy="0" r="20"/>
+    <circle cx="-90" cy="0" r="6"/>
+    <circle cx="90" cy="0" r="20"/>
+    <circle cx="90" cy="0" r="6"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="250" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="48" font-weight="700" fill="white" letter-spacing="3">MovieTix</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="285" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" fill="white" opacity="0.7" letter-spacing="2">Cinema Booking</text>
+
+  <!-- Bottom decorative bar -->
+  <rect x="350" y="310" width="100" height="3" rx="1.5" fill="#50E8D8" opacity="0.5"/>
+</svg>

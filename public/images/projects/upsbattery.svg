@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0C5A8A"/>
+      <stop offset="100%" stop-color="#50E8D8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3CD8C8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0C5A8A" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="charge" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#50E8D8" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#3CD8C8" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Decorative large circles -->
+  <circle cx="700" cy="80" r="140" fill="url(#accent)"/>
+  <circle cx="80" cy="400" r="100" fill="url(#accent)"/>
+
+  <!-- Decorative grid dots -->
+  <g fill="white" opacity="0.07">
+    <circle cx="620" cy="340" r="3"/><circle cx="660" cy="340" r="3"/><circle cx="700" cy="340" r="3"/><circle cx="740" cy="340" r="3"/>
+    <circle cx="620" cy="380" r="3"/><circle cx="660" cy="380" r="3"/><circle cx="700" cy="380" r="3"/><circle cx="740" cy="380" r="3"/>
+    <circle cx="620" cy="420" r="3"/><circle cx="660" cy="420" r="3"/><circle cx="700" cy="420" r="3"/><circle cx="740" cy="420" r="3"/>
+  </g>
+
+  <!-- Floating circles -->
+  <circle cx="150" cy="80" r="5" fill="#50E8D8" opacity="0.35"/>
+  <circle cx="300" cy="30" r="3" fill="white" opacity="0.2"/>
+  <circle cx="720" cy="270" r="4" fill="white" opacity="0.2"/>
+  <circle cx="500" cy="420" r="6" fill="#3CD8C8" opacity="0.2"/>
+  <circle cx="80" cy="230" r="4" fill="white" opacity="0.15"/>
+  <circle cx="600" cy="400" r="3" fill="#50E8D8" opacity="0.25"/>
+
+  <!-- Decorative lines -->
+  <line x1="50" y1="290" x2="170" y2="290" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+  <line x1="50" y1="310" x2="140" y2="310" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+
+  <!-- Battery Icon -->
+  <g transform="translate(400, 100)">
+    <!-- Battery body -->
+    <rect x="-30" y="-35" width="60" height="80" rx="6" fill="white" fill-opacity="0.12" stroke="white" stroke-width="2.5"/>
+    <!-- Battery terminal -->
+    <rect x="-10" y="-42" width="20" height="8" rx="3" fill="white" fill-opacity="0.2" stroke="white" stroke-width="2"/>
+    <!-- Charge level bars -->
+    <rect x="-20" y="25" width="40" height="10" rx="2" fill="url(#charge)" stroke="white" stroke-width="1" stroke-opacity="0.3"/>
+    <rect x="-20" y="10" width="40" height="10" rx="2" fill="url(#charge)" stroke="white" stroke-width="1" stroke-opacity="0.3"/>
+    <rect x="-20" y="-5" width="40" height="10" rx="2" fill="url(#charge)" stroke="white" stroke-width="1" stroke-opacity="0.3"/>
+    <!-- Lightning bolt -->
+    <polygon points="5,-25 -5,-5 3,-5 -5,20 8,0 0,0 8,-25" fill="white" opacity="0.5"/>
+  </g>
+
+  <!-- Power plug / connection shapes -->
+  <g transform="translate(400, 100)" stroke="#50E8D8" stroke-width="1.5" fill="none" opacity="0.35">
+    <!-- Left power lines -->
+    <path d="M-50,-20 L-60,-20 L-60,20 L-50,20"/>
+    <line x1="-65" y1="-10" x2="-55" y2="-10"/>
+    <line x1="-65" y1="10" x2="-55" y2="10"/>
+    <!-- Right power lines -->
+    <path d="M50,-20 L60,-20 L60,20 L50,20"/>
+    <line x1="55" y1="-10" x2="65" y2="-10"/>
+    <line x1="55" y1="10" x2="65" y2="10"/>
+  </g>
+
+  <!-- Energy circles -->
+  <g transform="translate(400, 100)" fill="none" opacity="0.2">
+    <circle cx="0" cy="0" r="55" stroke="#50E8D8" stroke-width="1" stroke-dasharray="4,8"/>
+    <circle cx="0" cy="0" r="70" stroke="#3CD8C8" stroke-width="0.8" stroke-dasharray="3,10"/>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="260" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="44" font-weight="700" fill="white" letter-spacing="2">UPS &amp; Battery</text>
+
+  <!-- Subtitle -->
+  <text x="400" y="295" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="20" fill="white" opacity="0.7" letter-spacing="2">B2B E-Commerce</text>
+
+  <!-- Bottom decorative bar -->
+  <rect x="350" y="320" width="100" height="3" rx="1.5" fill="#50E8D8" opacity="0.5"/>
+</svg>
