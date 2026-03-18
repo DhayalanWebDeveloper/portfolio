@@ -22,15 +22,37 @@ const contactInfo = [
 ];
 
 const projectTypes = ["Website Development", "Web Application", "WordPress Site", "E-commerce", "API Development", "Other"];
-const budgets = ["Less than $500", "$500 - $1,000", "$1,000 - $5,000", "$5,000 - $10,000", "$10,000+"];
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
-  const [form, setForm] = useState({ name: "", email: "", projectType: "", budget: "", message: "" });
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [form, setForm] = useState({ name: "", email: "", projectType: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.projectType || "General Inquiry",
+          message: form.message,
+        }),
+      });
+
+      if (!res.ok) throw new Error("Failed to send");
+      setSubmitted(true);
+    } catch {
+      setError("Failed to send message. Please try again or email me directly.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -104,21 +126,134 @@ export default function ContactPage() {
               >
                 {submitted ? (
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    className="flex flex-col items-center justify-center rounded-2xl border border-border bg-card p-12 text-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="relative flex flex-col items-center justify-center rounded-2xl border border-accent/30 overflow-hidden p-12 text-center"
+                    style={{ background: "var(--book-page)" }}
                   >
-                    <CheckCircle size={48} className="text-accent-2 mb-4" />
-                    <h3 className="text-xl font-semibold text-foreground">Message Sent!</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      Thank you for reaching out. I&apos;ll get back to you within 24 hours.
-                    </p>
-                    <button
-                      onClick={() => { setSubmitted(false); setForm({ name: "", email: "", projectType: "", budget: "", message: "" }); }}
-                      className="mt-6 text-sm text-accent hover:underline"
+                    {/* Animated background particles */}
+                    {[...Array(12)].map((_, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{
+                          opacity: [0, 0.6, 0],
+                          scale: [0, 1.5, 0],
+                          x: [0, (Math.random() - 0.5) * 200],
+                          y: [0, (Math.random() - 0.5) * 200],
+                        }}
+                        transition={{
+                          duration: 2,
+                          delay: 0.1 * i,
+                          repeat: Infinity,
+                          repeatDelay: 3,
+                        }}
+                        className="absolute rounded-full"
+                        style={{
+                          width: 6 + Math.random() * 8,
+                          height: 6 + Math.random() * 8,
+                          background: i % 3 === 0 ? "var(--accent)" : i % 3 === 1 ? "var(--color-accent-2)" : "var(--color-primary)",
+                          left: "50%",
+                          top: "40%",
+                        }}
+                      />
+                    ))}
+
+                    {/* Animated envelope icon */}
+                    <motion.div
+                      initial={{ y: 40, rotateX: 90 }}
+                      animate={{ y: 0, rotateX: 0 }}
+                      transition={{ type: "spring", damping: 12, delay: 0.2 }}
+                      className="relative mb-6"
+                    >
+                      <motion.div
+                        animate={{ y: [0, -6, 0] }}
+                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      >
+                        <div className="relative">
+                          {/* Glow ring */}
+                          <motion.div
+                            initial={{ scale: 0 }}
+                            animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0, 0.5] }}
+                            transition={{ duration: 2, repeat: Infinity }}
+                            className="absolute inset-0 rounded-full"
+                            style={{ background: "var(--accent)", filter: "blur(20px)" }}
+                          />
+                          <div
+                            className="relative flex items-center justify-center rounded-full p-5"
+                            style={{ background: "linear-gradient(135deg, var(--accent), var(--color-accent-2))" }}
+                          >
+                            <Mail size={32} style={{ color: "var(--book-page)" }} />
+                          </div>
+                        </div>
+                      </motion.div>
+                    </motion.div>
+
+                    {/* Animated checkmark */}
+                    <motion.div
+                      initial={{ scale: 0, rotate: -180 }}
+                      animate={{ scale: 1, rotate: 0 }}
+                      transition={{ type: "spring", delay: 0.5 }}
+                      className="absolute top-8 right-8"
+                    >
+                      <CheckCircle size={24} className="text-accent-2" />
+                    </motion.div>
+
+                    {/* Text animations */}
+                    <motion.h3
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.4 }}
+                      className="text-2xl font-bold gradient-text"
+                    >
+                      Message Delivered!
+                    </motion.h3>
+
+                    <motion.p
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.6 }}
+                      className="mt-3 text-sm"
+                      style={{ color: "var(--muted-foreground)" }}
+                    >
+                      Your message just landed in my inbox.
+                    </motion.p>
+
+                    <motion.p
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.7 }}
+                      className="mt-1 text-sm font-medium"
+                      style={{ color: "var(--color-accent-2)" }}
+                    >
+                      I&apos;ll reply within 24 hours — pinky promise!
+                    </motion.p>
+
+                    {/* Animated divider */}
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ delay: 0.8, duration: 0.6 }}
+                      className="my-6 h-px w-32"
+                      style={{ background: "var(--border)", transformOrigin: "center" }}
+                    />
+
+                    <motion.button
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 1 }}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      onClick={() => { setSubmitted(false); setForm({ name: "", email: "", projectType: "", message: "" }); }}
+                      className="rounded-full border px-6 py-2.5 text-sm font-medium transition-all"
+                      style={{
+                        borderColor: "var(--accent)",
+                        color: "var(--accent)",
+                        background: "transparent",
+                      }}
                     >
                       Send another message
-                    </button>
+                    </motion.button>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5 rounded-2xl border border-border bg-card p-6 sm:p-8">
@@ -132,29 +267,27 @@ export default function ContactPage() {
                         <input id="email" type="email" required value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-accent focus:outline-none" placeholder="john@example.com" />
                       </div>
                     </div>
-                    <div className="grid gap-5 sm:grid-cols-2">
-                      <div>
-                        <label htmlFor="projectType" className="mb-1.5 block text-xs font-medium text-muted-foreground">Project Type</label>
-                        <select id="projectType" value={form.projectType} onChange={(e) => setForm({ ...form, projectType: e.target.value })} className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground focus:border-accent focus:outline-none">
-                          <option value="">Select a type</option>
-                          {projectTypes.map((type) => (<option key={type} value={type}>{type}</option>))}
-                        </select>
-                      </div>
-                      <div>
-                        <label htmlFor="budget" className="mb-1.5 block text-xs font-medium text-muted-foreground">Budget Range</label>
-                        <select id="budget" value={form.budget} onChange={(e) => setForm({ ...form, budget: e.target.value })} className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground focus:border-accent focus:outline-none">
-                          <option value="">Select budget</option>
-                          {budgets.map((b) => (<option key={b} value={b}>{b}</option>))}
-                        </select>
-                      </div>
+                    <div>
+                      <label htmlFor="projectType" className="mb-1.5 block text-xs font-medium text-muted-foreground">Project Type</label>
+                      <select id="projectType" value={form.projectType} onChange={(e) => setForm({ ...form, projectType: e.target.value })} className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground focus:border-accent focus:outline-none">
+                        <option value="">Select a type</option>
+                        {projectTypes.map((type) => (<option key={type} value={type}>{type}</option>))}
+                      </select>
                     </div>
                     <div>
                       <label htmlFor="message" className="mb-1.5 block text-xs font-medium text-muted-foreground">Your Message *</label>
                       <textarea id="message" required rows={5} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} className="w-full resize-none rounded-lg border border-border bg-background px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-accent focus:outline-none" placeholder="Tell me about your project..." />
                     </div>
-                    <button type="submit" className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-bold text-background transition-all hover:bg-accent/80 hover:shadow-lg hover:shadow-accent/25 sm:w-auto">
-                      <Send size={16} />
-                      Send Message
+                    {error && (
+                      <p className="text-sm text-red-400">{error}</p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={loading}
+                      className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-bold text-background transition-all hover:bg-accent/80 hover:shadow-lg hover:shadow-accent/25 disabled:opacity-50 disabled:cursor-not-allowed sm:w-auto"
+                    >
+                      <Send size={16} className={loading ? "animate-pulse" : ""} />
+                      {loading ? "Sending..." : "Send Message"}
                     </button>
                   </form>
                 )}
