@@ -19,12 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://dhayalan.dev/blog/${post.slug}`,
+      url: `https://dhayalan-dev.vercel.app/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
     },
     twitter: { title: post.title, description: post.excerpt },
-    alternates: { canonical: `https://dhayalan.dev/blog/${post.slug}` },
+    alternates: { canonical: `https://dhayalan-dev.vercel.app/blog/${post.slug}` },
   };
 }
 

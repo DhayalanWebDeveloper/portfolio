@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://dhayalan.dev/sitemap.xml",
+    sitemap: "https://dhayalan-dev.vercel.app/sitemap.xml",
   };
 }

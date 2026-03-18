@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { projects, blogPosts } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://dhayalan.dev";
+  const baseUrl = "https://dhayalan-dev.vercel.app";
 
   const staticPages = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "monthly" as const, priority: 1 },

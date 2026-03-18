@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Dhayalan | Full Stack Web Developer | Angular Next.js FastAPI",
   description:
     "Innovative Full Stack Web Developer specializing in Angular, Next.js, FastAPI, and WordPress. Building dynamic, responsive, and secure enterprise web applications from Chennai, India.",
-  url: "https://dhayalan.dev",
+  url: "https://dhayalan-dev.vercel.app",
   ogImage: "/images/og.png",
   links: {
     github: "https://github.com/DhayalanWebDeveloper",

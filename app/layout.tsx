@@ -24,7 +24,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dhayalan.dev"),
+  metadataBase: new URL("https://dhayalan-dev.vercel.app"),
   title: {
     default: "Dhayalan | Full Stack Developer | Angular Next.js FastAPI",
     template: "%s | Dhayalan",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://dhayalan.dev",
+    url: "https://dhayalan-dev.vercel.app",
     title: "Dhayalan | Full Stack Developer",
     description:
       "Full Stack Web Developer specializing in Angular, Next.js, FastAPI, and WordPress.",
@@ -89,7 +89,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "R. Dhayalan",
-              url: "https://dhayalan.dev",
+              url: "https://dhayalan-dev.vercel.app",
               email: "dhayalandhaya149@gmail.com",
               telephone: "+91 74025 32025",
               jobTitle: "Full Stack Web Developer",

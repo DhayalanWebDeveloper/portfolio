@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
     openGraph: {
       title: project.title,
       description: project.shortDescription,
-      url: `https://dhayalan.dev/projects/${project.id}`,
+      url: `https://dhayalan-dev.vercel.app/projects/${project.id}`,
       images: [{ url: project.image, alt: project.title }],
     },
     twitter: { title: project.title, description: project.shortDescription },
-    alternates: { canonical: `https://dhayalan.dev/projects/${project.id}` },
+    alternates: { canonical: `https://dhayalan-dev.vercel.app/projects/${project.id}` },
   };
 }
 

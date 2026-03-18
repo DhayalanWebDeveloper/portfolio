@@ -100,7 +100,7 @@ export default async function Image() {
               letterSpacing: "4px",
             }}
           >
-            dhayalan.dev
+            dhayalan-dev.vercel.app
           </div>
         </div>
       </div>

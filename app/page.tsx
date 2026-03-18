@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     title: "Dhayalan | Full Stack Web Developer",
     description:
       "Full Stack Web Developer from Chennai. Angular, Next.js, FastAPI, WordPress. 9+ enterprise projects delivered.",
-    url: "https://dhayalan.dev",
+    url: "https://dhayalan-dev.vercel.app",
     type: "website",
   },
   twitter: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description:
       "Full Stack Web Developer from Chennai. Angular, Next.js, FastAPI, WordPress.",
   },
-  alternates: { canonical: "https://dhayalan.dev" },
+  alternates: { canonical: "https://dhayalan-dev.vercel.app" },
 };
 
 export default function Page() {

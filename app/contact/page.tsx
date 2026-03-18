@@ -9,10 +9,10 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Dhayalan | Hire a Full Stack Developer",
     description: "Get in touch for web development projects. Angular, Next.js, FastAPI, WordPress. Chennai, India.",
-    url: "https://dhayalan.dev/contact",
+    url: "https://dhayalan-dev.vercel.app/contact",
   },
   twitter: { title: "Contact Dhayalan", description: "Hire Dhayalan for web development. Angular, Next.js, FastAPI, WordPress." },
-  alternates: { canonical: "https://dhayalan.dev/contact" },
+  alternates: { canonical: "https://dhayalan-dev.vercel.app/contact" },
 };
 
 export default function Page() {
