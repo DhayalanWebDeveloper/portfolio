@@ -1,16 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
-const transporter = nodemailer.createTransport({
-  service: "gmail",
-  auth: {
-    user: process.env.SMTP_USER,
-    pass: process.env.SMTP_PASS,
-  },
-});
-
 export async function POST(req: NextRequest) {
   try {
+    // Check env vars
+    if (!process.env.SMTP_USER || !process.env.SMTP_PASS) {
+      console.error("Missing SMTP_USER or SMTP_PASS environment variables");
+      return NextResponse.json(
+        { error: "Server configuration error" },
+        { status: 500 }
+      );
+    }
+
     const { name, email, subject, message } = await req.json();
 
     if (!name || !email || !message) {
@@ -20,9 +21,19 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
     await transporter.sendMail({
       from: `"${name}" <${process.env.SMTP_USER}>`,
-      to: process.env.SMTP_TO,
+      to: process.env.SMTP_TO || process.env.SMTP_USER,
       replyTo: email,
       subject: subject || `Portfolio Contact: ${name}`,
       html: `
@@ -43,8 +54,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Email error:", error);
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
-      { error: "Failed to send message" },
+      { error: `Failed to send: ${errorMessage}` },
       { status: 500 }
     );
   }
