@@ -46,10 +46,11 @@ export default function ContactPage() {
         }),
       });
 
-      if (!res.ok) throw new Error("Failed to send");
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to send");
       setSubmitted(true);
-    } catch {
-      setError("Failed to send message. Please try again or email me directly.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to send message. Please try again or email me directly.");
     } finally {
       setLoading(false);
     }
