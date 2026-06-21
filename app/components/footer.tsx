@@ -36,11 +36,11 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block">
               <Image
-                src="/images/site-logo.png"
+                src="/images/logo.png"
                 alt="Dhayalan R - Web Developer"
-                width={160}
-                height={40}
-                className="h-10 w-auto"
+                width={120}
+                height={120}
+                className="h-20 w-auto rounded-2xl drop-shadow-lg"
               />
             </Link>
             <p className="mt-3 text-sm" style={{ color: "var(--muted-foreground)" }}>
