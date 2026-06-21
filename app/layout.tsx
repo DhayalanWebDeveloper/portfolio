@@ -26,11 +26,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://dhayalan-dev.vercel.app"),
   title: {
-    default: "Dhayalan | Full Stack Developer | Angular Next.js FastAPI",
-    template: "%s | Dhayalan",
+    default: "Dhayalan | Freelance Full Stack Web Developer in Chennai | Angular Next.js FastAPI",
+    template: "%s | Dhayalan Web Developer",
   },
   description:
-    "Full Stack Web Developer specializing in Angular, Next.js, FastAPI, and WordPress. Building modern, performant web applications from Chennai, India.",
+    "Full Stack Web Developer specializing in Angular, Next.js, FastAPI, and WordPress. Top Freelance Web Developer in Chennai offering affordable pricing.",
   keywords: [
     "Full Stack Developer",
     "Web Developer",
@@ -41,6 +41,19 @@ export const metadata: Metadata = {
     "Chennai",
     "India",
     "Dhayalan",
+    "Web Developer Chennai",
+    "Freelance Web Developer Chennai",
+    "Best Web Developer in Chennai",
+    "Top IT Companies in Chennai",
+    "Zoho Chennai",
+    "TCS Chennai",
+    "Freshworks Chennai",
+    "Cognizant Chennai",
+    "Next.js Developer India",
+    "Angular Developer Chennai",
+    "WordPress Developer Chennai",
+    "Website Pricing Chennai",
+    "Dhayalan Web Developer",
   ],
   authors: [{ name: "Dhayalan" }],
   creator: "Dhayalan",
@@ -48,17 +61,17 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://dhayalan-dev.vercel.app",
-    title: "Dhayalan | Full Stack Developer",
+    title: "Freelance Web Developer in Chennai | R. Dhayalan",
     description:
-      "Full Stack Web Developer specializing in Angular, Next.js, FastAPI, and WordPress.",
-    siteName: "Dhayalan Portfolio",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Dhayalan - Full Stack Developer" }],
+      "Top Freelance Web Developer in Chennai offering affordable pricing for Next.js, Angular, React, and WordPress websites.",
+    siteName: "Dhayalan Web Developer",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Freelance Web Developer Chennai" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dhayalan | Full Stack Developer",
+    title: "Freelance Web Developer in Chennai | R. Dhayalan",
     description:
-      "Full Stack Web Developer specializing in Angular, Next.js, FastAPI, and WordPress.",
+      "Top Freelance Web Developer in Chennai offering affordable pricing for Next.js, Angular, React, and WordPress websites.",
     images: ["/opengraph-image"],
   },
   robots: {
@@ -99,19 +112,17 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Person",
-              name: "R. Dhayalan",
+              "@type": "ProfessionalService",
+              name: "R. Dhayalan - Freelance Web Developer",
               url: "https://dhayalan-dev.vercel.app",
               email: "dhayalandhaya149@gmail.com",
               telephone: "+91 74025 32025",
-              jobTitle: "Full Stack Web Developer",
-              worksFor: {
-                "@type": "Organization",
-                name: "Xmedia Solution",
-              },
+              priceRange: "₹1000 - ₹4000",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Chennai",
+                addressRegion: "Tamil Nadu",
+                postalCode: "600089",
                 addressCountry: "IN",
               },
               knowsAbout: [

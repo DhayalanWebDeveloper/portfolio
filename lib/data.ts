@@ -18,6 +18,7 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
+  { label: "Freelance", href: "/freelance" },
   { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
@@ -105,24 +106,6 @@ export const projects = [
       "Small & medium retail businesses waste 40% of team time on repetitive tasks, use 9+ disconnected tools, and lose revenue due to slow lead response and poor inventory management.",
     solution:
       "Created an AI platform with 300+ agents that automates business operations, delivering 325% average ROI, 95% faster lead response, and 99.5% inventory accuracy through native ZOHO & Tally integration.",
-  },
-  {
-    id: "bommai-ai",
-    title: "Bomm.ai - AI Persona Platform",
-    description:
-      "Revolutionary patent-pending platform that transforms professional expertise into trainable AI personas. Features LinkedIn OAuth authentication, multi-step persona creation workflow, sandbox testing, Stripe monetization engine, and multi-user architecture for admins, creators, and end users.",
-    shortDescription:
-      "Patent-pending AI persona builder with monetization & LinkedIn auth",
-    techStack: ["Angular 19", "TypeScript", "Tailwind CSS", "Node.js", "Stripe", "JWT"],
-    category: "Web Apps",
-    image: "https://img.freepik.com/free-vector/chat-bot-concept-illustration_114360-5522.jpg",
-    liveUrl: "https://bomm.ai",
-    githubUrl: "#",
-    featured: true,
-    problem:
-      "Traditional AI tools are generic and impersonal. Professionals have no way to clone their expertise into an AI that can handle consultations and generate income 24/7.",
-    solution:
-      "Built a platform where professionals create AI personas trained on their knowledge, with resume intelligence, sandbox testing, Stripe monetization, and multi-platform publishing — enabling passive income from expert AI assistants.",
   },
   {
     id: "dinamani-news-portal",
@@ -225,7 +208,6 @@ export const experiences = [
       "Led development of MovieTix cinema booking portal with Next.js & Razorpay integration",
       "Developed Hospital Management System with DICOM medical imaging viewer",
       "Created Agent 7X AI automation platform with ZOHO & Tally integration",
-      "Built Bomm.ai patent-pending AI persona platform with Stripe monetization",
       "Delivered Dinamani Tamil news portal serving millions of readers",
       "Developed L&T enterprise asset management portal",
       "Built OdooSupport.in and UPS & Battery B2B e-commerce platforms",
@@ -431,4 +413,12 @@ export const blogPosts = [
       "SEO is a marathon, not a sprint. Focus on technical health, quality content, and user experience. Avoid shortcut tactics like keyword stuffing or link schemes — they may work briefly but will hurt you long-term. Build a fast, well-structured site with genuinely useful content, and the rankings will follow.",
     ],
   },
+];
+
+export const freelancePricing = [
+  { service: "HTML (static)", price: "₹1,000 – ₹1,500", highlight: false },
+  { service: "WordPress", price: "₹1,200 – ₹2,000", highlight: false },
+  { service: "React / Angular", price: "₹1,800 – ₹2,500", highlight: false },
+  { service: "Next.js", price: "₹2,000", highlight: true },
+  { service: "Strapi + React/Next.js/Angular (with API)", price: "₹2,500 – ₹4,000", highlight: false },
 ];

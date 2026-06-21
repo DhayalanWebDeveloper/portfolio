@@ -51,7 +51,7 @@ export default function Hero() {
             transition={{ delay: 0.4 }}
             className="mt-4 text-xl font-medium text-muted-foreground sm:text-2xl md:text-3xl"
           >
-            Full Stack Web Developer
+            Freelance Full Stack Web Developer
           </motion.h2>
 
           <motion.p
@@ -93,7 +93,7 @@ export default function Hero() {
               Download Resume
             </a>
             <Link
-              href="/contact"
+              href="/freelance"
               className="inline-flex items-center gap-2 rounded-full border border-accent/50 bg-accent/10 px-7 py-3.5 text-sm font-medium text-accent transition-all hover:bg-accent/20"
             >
               Hire Me

@@ -46,10 +46,10 @@ export default function CTASection() {
             className="relative mt-8"
           >
             <Link
-              href="/contact"
+              href="/freelance"
               className="group inline-flex items-center gap-2 rounded-full bg-accent px-8 py-4 text-sm font-bold text-background transition-all hover:bg-accent/80 hover:shadow-lg hover:shadow-accent/25"
             >
-              Hire Me
+              View Pricing & Hire Me
               <ArrowRight
                 size={16}
                 className="transition-transform group-hover:translate-x-1"

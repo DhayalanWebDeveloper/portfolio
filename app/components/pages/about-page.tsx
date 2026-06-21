@@ -88,7 +88,7 @@ export default function AboutPage() {
                   (Stripe, Razorpay, ZOHO, Tally) to deliver seamless user
                   experiences across web and mobile. I demonstrate a strong
                   commitment to code quality, agile development, and delivering
-                  scalable solutions that meet business objectives.
+                  scalable solutions that meet business objectives. I am also actively taking on freelance projects, delivering enterprise-grade websites directly to clients without the agency overhead.
                 </p>
               </div>
             </motion.div>
