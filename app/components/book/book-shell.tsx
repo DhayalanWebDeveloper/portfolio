@@ -23,11 +23,11 @@ export default function BookShell({ children }: { children: React.ReactNode }) {
             {/* Logo */}
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="/icon.svg"
+                src="/images/logo.png"
                 alt="Dhayalan R - Web Developer"
                 width={100}
                 height={100}
-                className="h-20 w-auto"
+                className="h-20 w-auto rounded-2xl drop-shadow-xl"
                 priority
               />
             </Link>
@@ -178,11 +178,11 @@ export default function BookShell({ children }: { children: React.ReactNode }) {
           >
             <Link href="/" className="inline-block">
               <Image
-                src="/icon.svg"
+                src="/images/logo.png"
                 alt="Dhayalan R - Web Developer"
                 width={64}
                 height={64}
-                className="h-12 w-auto"
+                className="h-12 w-auto rounded-xl drop-shadow-md"
                 priority
               />
             </Link>
